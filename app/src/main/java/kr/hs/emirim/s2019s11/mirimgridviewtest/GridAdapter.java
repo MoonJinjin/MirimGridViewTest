@@ -15,6 +15,10 @@ public class GridAdapter extends BaseAdapter {
             R.drawable.poster6,R.drawable.poster7,R.drawable.poster8,R.drawable.poster9,R.drawable.poster10,
             R.drawable.poster11,R.drawable.poster12,R.drawable.poster13,R.drawable.poster14,R.drawable.poster15,
             R.drawable.poster16,R.drawable.poster17,R.drawable.poster18,R.drawable.poster19,R.drawable.poster20};
+    String[] imgNames = {"톰보이", "타오르는 여인의 초상", "한여름의 판타지아", "테일 오브 테일즈", "호크니",
+    "문라이트", "마일스", "Midnight in Paris", "행복한 라짜로", "The World Of Us",
+    "패터슨", "너는 여기에 없었다", "핫썸머나이츠", "세븐", "킬유어달링",
+    "카페 벨에포크", "메리셸리", "모던타임즈", "캐롤", "어린왕자"};
 
     public GridAdapter(Context context){
         this.context = context;
@@ -50,8 +54,8 @@ public class GridAdapter extends BaseAdapter {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(context);
                 ImageView imgvPoster = dialogView.findViewById(R.id.imgv_dialog);
                 imgvPoster.setImageResource(imgRes[pos]);
-                dlg.setTitle("큰 포스터");
-                dlg.setIcon(R.mipmap.ic_launcher);
+                dlg.setTitle(imgNames[pos]);
+                dlg.setIcon(R.mipmap.icon);
                 dlg.setView(dialogView);
                 dlg.setNegativeButton("닫기", null);
                 dlg.show();
